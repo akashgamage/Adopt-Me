@@ -1,7 +1,10 @@
-import React from "react";
+//import React from "react";
 import { render } from "react-dom";
-import Pet from "./Pet";
+import SearchParams from "./SearchParams";
+//import Pet from "./Pet";
 
+
+// Template liike thsi ================================================================
 /*
 const Pet = () => {
     return React.createElement("div", {}, [
@@ -28,6 +31,10 @@ const App = () => {
 ReactDOM.render(React.createElement(App), document.getElementById('root'));
 */
 
+//============================================================================================
+
+// 1st way====================================================================================
+/*
 const App = () => {
   return React.createElement("div", {}, [
     React.createElement("h1", { id: "my-brand" }, "Abut Me!"),
@@ -48,5 +55,33 @@ const App = () => {
     }),
   ]);
 };
+*/
 
-render(React.createElement(App), document.getElementById("root"));
+// Upper code in JSX==============================================================================
+/*
+const App = () => {
+  return (
+    <div>
+      <h1>Adopt Me!</h1>
+      <Pet name="Luna" animal="dog" breed="Havanese" />
+      <Pet name="Pepper" animal="bird" breed="Cockatiel" />
+      <Pet name="Doink" animal="cat" breed="Mix" />
+    </div>
+  );
+};
+
+render(<App />, document.getElementById("root"));
+*/
+
+// SearchPaarams =======================================
+
+const App = () => {
+  return (
+    <div>
+      <h1>Adopt Me!</h1>
+      <SearchParams />
+    </div>
+  );
+};
+
+render(<App />, document.getElementById("root"));
