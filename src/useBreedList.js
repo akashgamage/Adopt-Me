@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useDebugValue } from "react";
 
 const localCache = {};
 
 export default function useBreedList() {
     const [breesList, setBreedList] = useState([]);
     const [status, setStatus] = useState("unloaded");
+    useDebugValue("number of values in cache: " + Object.keys(localCache).length);
 
     useEffect(() => {
         if (!animal) {
@@ -31,3 +32,4 @@ export default function useBreedList() {
 
     return [breedList, status];
 }
+

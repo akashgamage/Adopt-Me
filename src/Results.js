@@ -3,11 +3,11 @@ import Pet from "./Pet";
 const Results = ({ pets }) => {
     return (
         <div>
-            {!onselectstart.length ? (
+            {!pets.length ? (
                 <h1>No Pets Found</h1>
             ) : (
                 pets.map((pet) => (
-                    <pet
+                    <Pet
                         name={pet.name}
                         animal={pet.animal}
                         breed={pet.breed}

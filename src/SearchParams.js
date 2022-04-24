@@ -31,6 +31,7 @@ const SearchParams = () => {
                 onSubmit={e => {
                     e.preventDefault();
                     requestPets();
+                    
                 }}
             >
                 <label htmlFor="location">
